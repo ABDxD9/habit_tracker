@@ -1,0 +1,161 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
+    ],
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                // Retro Brown (default)
+                'retro': {
+                    50: '#FAF8F5',
+                    100: '#F5F0E8',
+                    200: '#E8DCC8',
+                    300: '#D4C4A8',
+                    400: '#C0AC88',
+                    500: '#8B7355',
+                    600: '#6B5742',
+                    700: '#4A3C2E',
+                    800: '#2A221A',
+                    900: '#1A140E',
+                },
+                // Winter Frost
+                'frost': {
+                    50: '#F0F9FF',
+                    100: '#E0F2FE',
+                    200: '#BAE6FD',
+                    300: '#7DD3FC',
+                    400: '#38BDF8',
+                    500: '#0EA5E9',
+                    600: '#0284C7',
+                    700: '#0369A1',
+                    800: '#075985',
+                    900: '#0C4A6E',
+                },
+                // Rainy Night
+                'rainy': {
+                    50: '#F0F4F8',
+                    100: '#D9E2EC',
+                    200: '#BCCCDC',
+                    300: '#9FB3C8',
+                    400: '#829AB1',
+                    500: '#627D98',
+                    600: '#486581',
+                    700: '#334E68',
+                    800: '#243B53',
+                    900: '#102A43',
+                },
+                // Forest Green
+                'forest': {
+                    50: '#F0FDF4',
+                    100: '#DCFCE7',
+                    200: '#BBF7D0',
+                    300: '#86EFAC',
+                    400: '#4ADE80',
+                    500: '#22C55E',
+                    600: '#16A34A',
+                    700: '#15803D',
+                    800: '#166534',
+                    900: '#14532D',
+                },
+                // Autumn Cozy
+                'autumn': {
+                    50: '#FFF7ED',
+                    100: '#FFEDD5',
+                    200: '#FED7AA',
+                    300: '#FDBA74',
+                    400: '#FB923C',
+                    500: '#F97316',
+                    600: '#EA580C',
+                    700: '#C2410C',
+                    800: '#9A3412',
+                    900: '#7C2D12',
+                },
+                // Sakura Spring
+                'sakura': {
+                    50: '#FDF2F8',
+                    100: '#FCE7F3',
+                    200: '#FBCFE8',
+                    300: '#F9A8D4',
+                    400: '#F472B6',
+                    500: '#EC4899',
+                    600: '#DB2777',
+                    700: '#BE185D',
+                    800: '#9D174D',
+                    900: '#831843',
+                },
+                // Ocean Calm
+                'ocean': {
+                    50: '#ECFEFF',
+                    100: '#CFFAFE',
+                    200: '#A5F3FC',
+                    300: '#67E8F9',
+                    400: '#22D3EE',
+                    500: '#06B6D4',
+                    600: '#0891B2',
+                    700: '#0E7490',
+                    800: '#155E75',
+                    900: '#164E63',
+                },
+                // Minimal Cream
+                'cream': {
+                    50: '#FEFDFB',
+                    100: '#FDFCF9',
+                    200: '#FAF8F3',
+                    300: '#F5F2EA',
+                    400: '#EBE6D9',
+                    500: '#D6CDB8',
+                    600: '#B8AC93',
+                    700: '#9A8B6E',
+                    800: '#7C6A4A',
+                    900: '#5E4926',
+                },
+            },
+            fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                display: ['Outfit', 'sans-serif'],
+            },
+            backdropBlur: {
+                xs: '2px',
+            },
+            animation: {
+                'drift': 'drift 20s ease-in-out infinite',
+                'drift-slow': 'drift 30s ease-in-out infinite',
+                'float': 'float 6s ease-in-out infinite',
+                'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'shimmer': 'shimmer 2s linear infinite',
+                'grain': 'grain 8s steps(10) infinite',
+            },
+            keyframes: {
+                drift: {
+                    '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+                    '33%': { transform: 'translate(30px, -30px) scale(1.1)' },
+                    '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                },
+                float: {
+                    '0%, 100%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(-20px)' },
+                },
+                shimmer: {
+                    '0%': { backgroundPosition: '-1000px 0' },
+                    '100%': { backgroundPosition: '1000px 0' },
+                },
+                grain: {
+                    '0%, 100%': { transform: 'translate(0, 0)' },
+                    '10%': { transform: 'translate(-5%, -10%)' },
+                    '20%': { transform: 'translate(-15%, 5%)' },
+                    '30%': { transform: 'translate(7%, -25%)' },
+                    '40%': { transform: 'translate(-5%, 25%)' },
+                    '50%': { transform: 'translate(-15%, 10%)' },
+                    '60%': { transform: 'translate(15%, 0%)' },
+                    '70%': { transform: 'translate(0%, 15%)' },
+                    '80%': { transform: 'translate(3%, 35%)' },
+                    '90%': { transform: 'translate(-10%, 10%)' },
+                },
+            },
+        },
+    },
+    plugins: [],
+}
